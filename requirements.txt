@@ -1,0 +1,4 @@
+django
+gunicorn[gevent]
+whitenoise
+https://github.com/TOMToolkit/tom_base/archive/master.zip

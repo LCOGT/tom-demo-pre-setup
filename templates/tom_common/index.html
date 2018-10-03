@@ -1,0 +1,43 @@
+{% extends 'tom_common/base.html' %}
+{% load static targets_extras tom_common_extras %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-md-8">
+    <h2 class="text-center">Demo Target Observation Manager</h2>
+    <p class="text-center"><img src="{% static 'tom_common/img/logo-text.png' %}" class="img-fluid mx-auto"></p>
+    <p>This is a demo Target Observation Manager for the purpose of showcasing some of the framework's capabilities</p>
+    <p>You may poke around, but all changes are ephemeral. All observation requests are requested on a dummy server</p>
+    <p>
+      <strong>Login</strong>: tom_pi</br>
+      <strong>Pass</strong>: tom_pi
+    </p>
+    <h3>Other Resources</h3>
+    <ul>
+      <li>
+        This <a href="https://github.com/TOMToolkit/tom_demo">repo on github</a>.
+      </li>
+      <li>
+        Check out the <a href="https://tomtoolkit.github.io" title="TOM Toolkit home page">TOM Toolkit homepage</a>
+        for the latest news, downloads and documentation.
+      </li>
+      <li>The official <a href="https://www.djangoproject.com/">Django documentation</a>.</li>
+      <li>The official <a href="http://www.astropy.org/">Astropy documentation</a>.</li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        Latest Comments
+      </div>
+      {% recent_comments %}
+    </div>
+    <br/>
+    <div class="card">
+      <div class="card-header">
+        Latest Targets
+      </div>
+      {% recent_targets %}
+  </div>
+</div>
+{% endblock %}
