@@ -1,4 +1,4 @@
-django
+https://github.com/django/django/archive/master.zip
 gunicorn[gevent]
 whitenoise
 https://github.com/TOMToolkit/tom_base/archive/master.zip
